@@ -1,0 +1,838 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --red: #ff0000;
+
+    --primary: #f3354e;
+    --primary-50: #fbc0c8;
+    --primary-25: #feebed;
+
+    --secondary: #05101d;
+    --primary-50: #091c31;
+    --grey-light: #e7e9ec;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+/* Common CSS Here */
+h1{
+    font-size: 120px;
+    line-height: 120%;
+    font-weight: 600;
+}
+h2{
+    font-size: 100px;
+    line-height: 120%;
+    font-weight: 500;
+}
+h3{
+    font-size: 60px;
+    line-height: 120%;
+    font-weight: 500;
+}
+h4{
+    font-size: 40px;
+    line-height: 120%;
+    font-weight: 600;
+}
+h5{
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 500;
+}
+h6{
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 500;
+}
+p{
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 500;
+}
+.border-radius {
+    border-radius: 12px;
+}
+.border-radius-20 {
+    border-radius: 20px;
+}
+.text-white {
+    color: var(--white);
+}
+.bg-secondary-dark {
+    background-color: var(--secondary);
+}
+
+
+/* Buttons Design Start */
+.btn-primary {
+    color: var(--white);
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-primary:hover,
+.btn-check:focus+.btn-primary, 
+.btn-primary:focus,
+.btn-primary:active:focus {
+    color: var(--white);
+    background-color: var(--primary);
+    border-color: var(--primary);
+    opacity: 0.8;
+    outline: none;
+    box-shadow: none;
+}
+.btn-secondary {
+    color: var(--white);
+    background-color: transparent;
+    border-color: var(--white);
+}
+.btn-secondary:hover,
+.btn-check:focus+.btn-secondary, 
+.btn-secondary:focus,
+.btn-secondary:active:focus {
+    color: var(--white);
+    background-color: transparent;
+    border-color: var(--white);
+    opacity: 0.8;
+    outline: none;
+    box-shadow: none;
+}
+body .btn {
+    min-width: 175px;
+    padding: 0.8rem 0.6rem;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    line-height: 32px;
+}
+.btns-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+/* Buttons Design Ends */
+
+/* Header Section CSS */
+.cus-banner {
+    width: 100%;
+    display: inline-block;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+.cus-banner:before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.70);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.banner-img{
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    object-fit: cover;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+.banner-con {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 24px;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.banner-con h1 {
+    color: var(--white);
+    text-transform: uppercase;
+}
+.banner-con {
+    color: var(--white);
+}
+header .navbar {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    right: 0;
+    width: calc(100% - 40px);
+    display: inline-block;
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    border-radius: 8px;
+    padding: 16px;
+    background: rgba(5, 16, 29, 0.20);
+    backdrop-filter: blur(4px);
+}
+header .navbar .container-fluid {
+    padding: 0;
+}
+header .navbar-brand {
+    padding: 0;
+    margin-right: 3rem;
+}
+header .navbar .nav-link {
+    color: var(--white);
+}
+header .navbar .nav-link:hover{
+    color: var(--primary);
+}
+header .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    color: var(--white);
+}
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .show>.nav-link {
+    color: var(--primary);
+}
+.navbar-toggler:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+/* Footer Section CSS */
+footer h6{
+    font-weight: 600;
+    color: var(--white);
+}
+footer ul li{
+    margin-bottom: 5px;
+}
+footer ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+}
+footer ul li a:hover,
+footer ul li a:focus {
+    color: var(--primary);
+}
+.cus-copy-right p{
+    font-size: 16px;
+    font-weight: 400;
+}
+footer .footer-contact-us ul li a svg {
+    width: 24px;
+    height: 30px;
+    margin-right: 16px;
+}
+footer .footer-contact-us ul li a span {
+    width: calc(100% - 40px);
+    display: inline-block;
+    word-wrap: break-word;
+}
+footer .footer-contact-us ul li a {
+    display: flex;
+    align-items: flex-start;
+}
+.footer-bottom-sec {
+    border-top: 1px solid #091C31;
+}
+
+.cus-numbering h2 {
+    color: var(--primary);
+}
+.badges-sec {
+    margin-left: 100px;
+    margin-bottom: 0;
+}
+.badges-sec li {
+    padding: 30px 0;
+    border-top: 1px solid var(--grey-light);
+}
+.badges-sec li:last-child {
+    border-bottom: 1px solid var(--grey-light);
+}
+.cus-badges .badge {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    color: var(--secondary);
+    background-color: var(--grey-light);
+}
+.map-addresses {
+    width: 100%;
+    max-width: 740px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.map-addresses .adresses-list {
+    background: rgba(5, 16, 29, 0.60);
+    backdrop-filter: blur(10px);
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 25px;
+}
+.adresses-list ul li {
+    margin-bottom: 30px;
+}
+.adresses-list ul li:last-child {
+    margin-bottom: 0;
+}
+.adresses-list ul li svg {
+    width: 80px;
+    height: 80px;
+}
+.adresses-list ul li p, .adresses-list ul li p a {
+    color: var(--white);
+    text-decoration: none;
+}
+.who-we-are-sec h6 {
+    font-weight: 400;
+    line-height: 160%;
+    max-width: 570px;
+}
+.why-best-sec ul li {
+    border-top: 1px solid var(--grey-light);
+}
+.why-best-sec ul li:last-child {
+    border-bottom: 1px solid var(--grey-light);
+}
+.why-best-sec ul li h3 {
+    white-space: nowrap;
+}
+.why-best-sec ul li img {
+    width: auto;
+    height: 100px;
+    object-fit: contain;
+}
+.why-best-sec ul li * {
+    flex: 1;
+}
+.why-best-sec ul li p {
+    font-weight: 400;
+    line-height: 160%;
+}
+.cus-rra-group button.btn-primary {
+    background-color: transparent;
+    color: var(--primary);
+}
+.rra-group-inner:hover button.btn-primary,
+.cus-rra-group button.btn-primary:hover,
+.cus-rra-group button.btn-primary:focus {
+    background-color: var(--primary);
+    color: var(--white);
+}
+.rra-group-inner {
+    background-color: var(--secondary);
+    padding: 8rem 2rem;
+    overflow: hidden;
+}
+.rra-group-inner img{ 
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 2s;
+}
+.rra-group-inner:hover img{
+    opacity: 1;
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.rra-group-inner h2,
+.rra-group-inner button{
+    position: relative;
+}
+.companies-list {
+    padding: 28px 28px 40px 28px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--grey-light);
+}
+.cus-enquiry .bg-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 2s;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.cus-enquiry:hover img{
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.enquiry-form {
+    backdrop-filter: blur(10px);
+    background: rgba(5, 16, 29, 0.40);
+}
+.enquiry-form input, .enquiry-form textarea {
+    background-color: transparent;
+    color: var(--white);
+    padding: .5rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--grey-light);
+}
+.enquiry-form input {
+    min-height: 60px;
+}
+.enquiry-form textarea{
+    min-height: 140px;
+}
+.form-space{
+    padding: 2rem;
+}
+.enquiry-form input:hover, 
+.enquiry-form input:focus, 
+.enquiry-form input:focus-visible,
+.enquiry-form textarea:hover, 
+.enquiry-form textarea:focus,
+.enquiry-form textarea:focus-visible {
+    color: var(--white);
+    background-color: transparent;
+    box-shadow: none;
+    border-color: var(--white);
+    outline: none;
+}
+.enquiry-form ::-webkit-input-placeholder {
+    color: var(--grey-light);
+}
+.enquiry-form ::-moz-placeholder {
+    color: var(--grey-light);
+}
+.enquiry-form :-ms-input-placeholder {
+    color: var(--grey-light);
+}
+.enquiry-form :-moz-placeholder {
+    color: var(--grey-light);
+}
+body .enquiry-form .btn {
+    padding: 16px 40px;
+    min-width: auto;
+}
+
+/* Testimonial CSS Code Start */
+.testimonial-sec {
+    width: 100%;
+    display: flex;
+    background-color: var(--primary-25);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+.testimonial-sec .carousel-caption{
+    position: static;
+    color: var(--black);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.testimonial-sec .carousel-indicators {
+    margin-right: auto;
+    margin-left: auto;
+    bottom: -25px;
+}
+.testimonial-sec .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary);
+}
+.testimonial-sec .carousel-caption .testimonial-user {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.testimonial-sec .carousel-caption .testimonial-user img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.testimonial-sec .carousel-caption h6 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    color: var(--secondary);
+}
+.testimonial-sec .carousel-caption p {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 160%;
+    color: var(--secondary);
+}
+/* Testimonial CSS Code End */
+
+
+
+/* Responsive View Css Here */
+@media (max-width: 1650.98px) { 
+    h1{
+        font-size: 100px;
+    }
+    h2{
+        font-size: 80px;
+    }
+    h3{
+        font-size: 50px;
+    }
+    h4{
+        font-size: 35px;
+    }
+    h5{
+        font-size: 22px;
+    }
+    h6{
+        font-size: 18px;
+    }
+}
+@media (max-width: 1440.98px) { 
+    h1{
+        font-size: 80px;
+    }
+    h2{
+        font-size: 60px;
+    }
+    h3{
+        font-size: 40px;
+    }
+    h4{
+        font-size: 30px;
+    }
+    h5{
+        font-size: 20px;
+    }
+    h6{
+        font-size: 16px;
+    }
+    footer ul li a {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .testimonial-sec .carousel-caption h6,
+    .testimonial-sec .carousel-caption p {
+        font-size: 18px;
+    }
+    .footer-logo img {
+        max-width: 300px;
+    }
+}
+@media (max-width: 1399.98px) { 
+
+}
+@media (max-width: 1199.98px) { 
+    h1{
+        font-size: 70px;
+    }
+    h2{
+        font-size: 60px;
+    }
+    h3{
+        font-size: 35px;
+    }
+    h4{
+        font-size: 26px;
+    }
+    .badges-sec {
+        margin-left: 0;
+    }
+    header .navbar-brand {
+        margin-right: 2rem;
+    }
+    header .navbar-brand img {
+        max-width: 100px;
+    }
+    body .btn {
+        min-width: 150px;
+        padding: 0.6rem 0.4rem;
+    }
+    .adresses-list ul li {
+        margin-bottom: 20px;
+    }
+    .why-best-sec ul li img {
+        height: 80px;
+    }
+    .companies-list img {
+        max-width: 100px;
+    }
+}
+@media (max-width: 991.98px) { 
+    .footer-logo img {
+        max-width: 250px;
+    }
+    .footer-logo {
+        margin-bottom: 40px;
+    }
+    footer.pt-5 {
+        padding-top: 1rem !important;
+    }
+    .why-best-sec ul li {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .why-best-sec ul li img {
+        width: 160px;
+        height: auto;
+        margin: 15px 0;
+    }
+    .adresses-list ul li p, 
+    .adresses-list ul li p a {
+        font-size: 14px;
+    }
+    .adresses-list ul li {
+        margin-bottom: 15px;
+    }
+    .adresses-list ul li svg {
+        width: 70px;
+        height: 70px;
+    }
+    .map-addresses {
+        max-width: 650px;
+    }
+    .navbar-light .navbar-toggler {
+        border-color: var(--white);
+        background-color: var(--white);
+    }
+    .testimonial-sec .carousel-caption .testimonial-user {
+        width: 120px;
+        height: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .testimonial-sec .carousel-caption h6, 
+    .testimonial-sec .carousel-caption p {
+        text-align: center;
+    }
+    .who-we-are-sec h6.mb-5, 
+    .who-we-are-sec button {
+        max-width: 100%;
+        margin-bottom: 2rem !important;
+    }
+    header .navbar-expand-lg .navbar-nav .nav-link {
+        font-size: 16px;
+        padding: 0.8rem 0;
+    }
+    header .navbar-nav {
+        padding-top: 1rem;
+    }
+    .cus-client-testimonials h2 {
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 767.98px) {
+    h1{
+        font-size: 70px;
+    }
+    h2{
+        font-size: 50px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 24px;
+    }
+    h5{
+        font-size: 20px;
+    }
+    h6{
+        font-size: 16px;
+    }
+    p{
+        font-size: 14px;
+    }
+    body .btn {
+        min-width: 160px;
+        padding: 0.6rem 0.4rem;
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .cus-copy-right p, 
+    header .navbar-expand-lg .navbar-nav .nav-link{
+        font-size: 14px;
+    }
+    .cus-badges .badge {
+        font-size: 14px;
+        line-height: 36px;
+    }
+    footer ul li a {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .testimonial-sec .carousel-caption h6,
+    .testimonial-sec .carousel-caption p {
+        font-size: 16px;
+    }
+    .footer-logo img {
+        max-width: 220px;
+    }
+    .adresses-list ul li svg {
+        width: 60px;
+        height: 60px;
+    }
+    .map-addresses {
+        max-width: calc(100% - 40px);
+        position: static;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer ul {
+        padding-bottom: 30px;
+    }
+    footer .footer-bottom-sec ul, 
+    footer .footer-contact-us ul {
+        padding-bottom: 0;
+    }
+    footer h6.mb-4 {
+        margin-bottom: 1rem !important;
+    }
+    .companies-list {
+        padding: 15px 15px 20px 15px;
+    }
+    .rra-group-inner {
+        padding: 6rem 2rem;
+    }
+    body .enquiry-form .btn {
+        padding: 10px 40px;
+    }
+    .testimonial-sec {
+        padding: 2rem;
+    }
+}
+@media (max-width: 575.98px) { 
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    h3{
+        font-size: 26px;
+    }
+    h4{
+        font-size: 22px;
+    }
+    h5{
+        font-size: 18px;
+    }
+    .companies-list {
+        margin: 10px 0;
+    }
+    .cus-rra-group-companies h2.mb-5 {
+        margin-bottom: 1rem !important;
+    }
+    .cus-numbering .numbering-list {
+        margin: 15px 0;
+    }
+    .form-space {
+        padding: 1.5rem;
+    }
+    .rra-group-inner {
+        padding: 4rem 1rem;
+    }
+    .cus-numbering.py-5 {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .testimonial-sec .carousel-caption .testimonial-user {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (max-width: 480.98px) { 
+    .map-addresses {
+        max-width: calc(100% - 30px);
+    }
+    .map-addresses {
+        flex-direction: column;
+    }
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 24px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    h5{
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+    body .btn {
+        min-width: 145px;
+    }
+    .cus-badges .badge {
+        font-size: 12px;
+        line-height: 30px;
+    }
+    footer ul li a {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .footer-logo img {
+        max-width: 180px;
+    }
+    .footer-bottom-sec .cus-copy-right {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .why-best-sec ul li img {
+        width: 140px;
+    }
+    .testimonial-sec {
+        padding: 1.5rem;
+    }
+    .testimonial-sec .carousel-caption h6, 
+    .testimonial-sec .carousel-caption p {
+        font-size: 14px;
+    }
+}
